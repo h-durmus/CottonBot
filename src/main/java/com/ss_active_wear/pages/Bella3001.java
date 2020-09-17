@@ -7,30 +7,24 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class Bella3001 {
 
     protected WebDriverWait wait;
     protected Actions actions;
 
+
+    @FindBy(xpath = "//div[@id='c39897']//div[@class='gR']//div[@class='i']//span[4]")
+    private List<WebElement> Pink;
+
     @FindBy()
-    private WebElement sPink;
+    private WebElement Mauve;
+
     @FindBy()
-    private WebElement mPink;
-    @FindBy()
-    private WebElement lPink;
-    @FindBy()
-    private WebElement sMauve;
-    @FindBy()
-    private WebElement mMauve;
-    @FindBy()
-    private WebElement lMauve;
-    @FindBy()
-    private WebElement sAutumn;
-    @FindBy()
-    private WebElement mAutumn;
-    @FindBy()
-    private WebElement lAutumn;
+    private WebElement Autumn;
 
 
     @BeforeClass

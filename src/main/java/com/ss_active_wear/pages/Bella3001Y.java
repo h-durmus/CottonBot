@@ -40,7 +40,7 @@ public class Bella3001Y {
 
     @BeforeClass
     public void setup() {
-        String URL = ConfigurationReader.getProperty("3001");
+        String URL = ConfigurationReader.getProperty("3001Y");
         Driver.getDriver().get(URL);
         wait = new WebDriverWait(Driver.getDriver(), 30);
         actions = new Actions(Driver.getDriver());
