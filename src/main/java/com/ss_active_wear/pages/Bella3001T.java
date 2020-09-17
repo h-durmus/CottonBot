@@ -18,26 +18,6 @@ public class Bella3001T {
     protected WebDriverWait wait;
     protected Actions actions;
 
-    @FindBy()
-    private WebElement sHMaroon;
-    @FindBy()
-    private WebElement mHMaroon;
-    @FindBy()
-    private WebElement lHMaroon;
-    @FindBy()
-    private WebElement sPink;
-    @FindBy()
-    private WebElement mPink;
-    @FindBy()
-    private WebElement lPink;
-    @FindBy()
-    private WebElement sBlack;
-    @FindBy()
-    private WebElement mBlack;
-    @FindBy()
-    private WebElement lBlack;
-
-
     @BeforeClass
     public void setup(){
         String URL = ConfigurationReader.getProperty("3001T");
@@ -51,23 +31,5 @@ public class Bella3001T {
     public void teardown(){
         Driver.closeDriver();
     }
-
-    public boolean alert_s_HMaroon(){return true;}
-
-    public boolean alert_m_HMaroon(){return true;}
-
-    public boolean alert_l_HMaroon(){return true;}
-
-    public boolean alert_s_Pink(){return true;}
-
-    public boolean alert_m_Pink(){return true;}
-
-    public boolean alert_l_Pink(){return true;}
-
-    public boolean alert_s_Black(){return true;}
-
-    public boolean alert_m_Black(){return true;}
-
-    public boolean alert_l_Black(){return true;}
 
 }

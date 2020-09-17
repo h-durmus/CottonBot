@@ -4,6 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
+
 public class SSActiveWearUtilities {
 
     @FindBy(id = "M_M_zGridWarehouses")
@@ -31,7 +33,6 @@ public class SSActiveWearUtilities {
 
     /**
      * select a color and it will give the alphanumeric code
-     * to place in xpath locator
      * */
     public static String colorCodes(String color){
         switch (color.toLowerCase().trim()){
@@ -76,6 +77,48 @@ public class SSActiveWearUtilities {
                 return "c79599";
         }
         return "-1";
+    }
+
+    /**
+     * checks if the count of t-shirts are equal to 0
+     * if not equals to 0, returns false
+     * @param color t-shirt color as List<WebElement>
+     * @param size  t-shirt size
+     * @return boolean if number is not 0, returns false
+     * */
+    public static boolean isThereAnyShirt(List<WebElement> color, String size){
+        switch (size){
+            case "extra small":
+            case "xsmall":
+            case "xs":
+                if (!color.get(0).getText().equals("0")) return false;
+            case "small":
+            case "s":
+                if (!color.get(1).getText().equals("0")) return false;
+            case "medium":
+            case "m":
+                if (!color.get(2).getText().equals("0")) return false;
+            case "large":
+            case "l":
+                if (!color.get(3).getText().equals("0")) return false;
+            case "extra large":
+            case "xlarge":
+            case "xl":
+                if (!color.get(4).getText().equals("0")) return false;
+            case "2xlarge":
+            case "2xl":
+                if (!color.get(5).getText().equals("0")) return false;
+            case "3xlarge":
+            case "3xl":
+                if (!color.get(6).getText().equals("0")) return false;
+            case "4xlarge":
+            case "4xl":
+                if (!color.get(7).getText().equals("0")) return false;
+            case "5xlarge":
+            case "5xl":
+                if (!color.get(8).getText().equals("0")) return false;
+        }
+        return true;
     }
 
 }

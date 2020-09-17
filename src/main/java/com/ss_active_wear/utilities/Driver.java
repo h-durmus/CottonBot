@@ -17,7 +17,7 @@ public class Driver {
             String browser = ConfigurationReader.getProperty("browser").toLowerCase();
             switch (browser){
                 case "chrome":
-                    WebDriverManager.chromedriver().browserVersion("81").setup();
+                    WebDriverManager.chromedriver().browserVersion("78").setup();
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--start-maximized");
                     driver = new ChromeDriver(options);

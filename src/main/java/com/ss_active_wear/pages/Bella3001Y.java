@@ -18,26 +18,6 @@ public class Bella3001Y {
     protected WebDriverWait wait;
     protected Actions actions;
 
-    @FindBy()
-    private WebElement sBerry;
-    @FindBy()
-    private WebElement mBerry;
-    @FindBy()
-    private WebElement lBerry;
-    @FindBy()
-    private WebElement sHMauve;
-    @FindBy()
-    private WebElement mHMauve;
-    @FindBy()
-    private WebElement lHMauve;
-    @FindBy()
-    private WebElement sBlack;
-    @FindBy()
-    private WebElement mBlack;
-    @FindBy()
-    private WebElement lBlack;
-
-
     @BeforeClass
     public void setup() {
         String URL = ConfigurationReader.getProperty("3001Y");
@@ -50,42 +30,6 @@ public class Bella3001Y {
     @AfterClass
     public void teardown() {
         Driver.closeDriver();
-    }
-
-    public boolean alert_s_Berry() {
-        return true;
-    }
-
-    public boolean alert_m_Berry() {
-        return true;
-    }
-
-    public boolean alert_l_Berry() {
-        return true;
-    }
-
-    public boolean alert_s_HMauve() {
-        return true;
-    }
-
-    public boolean alert_m_HMauve() {
-        return true;
-    }
-
-    public boolean alert_l_HMauve() {
-        return true;
-    }
-
-    public boolean alert_s_Black() {
-        return true;
-    }
-
-    public boolean alert_m_Black() {
-        return true;
-    }
-
-    public boolean alert_l_Black() {
-        return true;
     }
 
 }
